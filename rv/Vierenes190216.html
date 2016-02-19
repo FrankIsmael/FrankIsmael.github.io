@@ -33,7 +33,12 @@ canvas {width:50%;height:50%;}
   escena.add(cubo);
   function render(){
     requestAnimationFrame(render);
+    
+      cubo.rotation.x+=0.1;
+    cubo.rotation.y+=0.1;
     renderer.render(escena,camara);
+    
+  
   }
   render();
   </script>
