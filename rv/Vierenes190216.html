@@ -32,8 +32,8 @@ canvas {width:100%;height:100%;}
   var cubo=new THREE.Mesh(forma,material);
   escena.add(cubo);
   function render(){
-    requestAnimationFrame(renderer);
-    renderer.render(escena,camera);
+    requestAnimationFrame(render);
+    renderer.render(escena,camara);
   }
   render();
   </script>
