@@ -19,14 +19,12 @@ canvas {width:100%;height:100%;}
   var near =0.1;
   var far=1000;
   var camara=new THREE.PerspectiveCamera(fov,aspect,near,far);
-  camara.position.z=5;
+  camara.position.z=500;
   var renderer =new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth,window.innerHeight);
   document.body.appendChild(renderer.domElement);
   
-</script>
 
-<script>
   var figura=new THREE.Shape();
   // la figura se realiza sobre el plano xy
   
