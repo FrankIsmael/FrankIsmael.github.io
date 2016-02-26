@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<title>Uso de extrusiones</title>
+<meta http-eqiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+body{margin:0;}
+canvas{width=100%; height=100%;}
+</style>
+</head>
+<body>
+<script src="../../three.min.js"></script>
+<script>
+var camara, escena,renderer;
+
+escena= new THREE.Scene();
+camara=new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,1,1000);
+camara.position.z=500;
+renderer=new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth,window.innerHeight);
+document.body.appendChild(renderer,domElement);
+
+var figura=new THREE.Shape();
+
+figura.moveTo(10,10);
+figura.lineTo(10,40);
+figura.lineTo(40,40);
+figura.lineTo(10,10);
+
+var forma=new THREE.ExtrudeGeometry(figura,{amount:10});
+
+var malla=new THREE.Mesh(forma);
+
+escena.add(malla);
+
+function loop(){
+requestAnimationFrame(loop);
+
+malla.rotation.x+=0.01;
+malla.rotation.y+=0.01;
+
+renderer.render(escena,camara);}
+loop();
+</script>
+</body>
+</html>-
