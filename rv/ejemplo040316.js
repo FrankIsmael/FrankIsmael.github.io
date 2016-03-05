@@ -38,8 +38,8 @@ document.body.appendChild(renderer.domElement);
 var escena, camara, renderer;
 var step,piernaD,piernaI;
 
-function loop(){
-requestAnimationFrame(loop);<!--loop-->
+function render(){
+requestAnimationFrame(render);<!--loop-->
 renderer.render(escena,camara);
 
 if(Math.abs(piernaD.rotation.z)>5)
@@ -50,4 +50,4 @@ piernaI.rotation.z-=step;
 }
 
 setup();
-loop();
+render();
