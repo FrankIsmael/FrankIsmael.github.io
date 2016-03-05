@@ -48,5 +48,4 @@ piernaD.rotation.z+=step;
 piernaI.rotation.z-=step;
 }
 
-setup();
 loop();
