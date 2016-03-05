@@ -41,6 +41,7 @@ function loop(){
 requestAnimationFrame(loop);<!--loop-->
 
   function render(){
+    requestAnimationFrame(render);
     renderer.render(escena,camara);
   }
   render();
