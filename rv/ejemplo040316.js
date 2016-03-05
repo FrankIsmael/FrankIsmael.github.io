@@ -46,7 +46,7 @@ step=-step;
 piernaD.rotation.z+=step;
 piernaI.rotation.z-=step;
 
-renderer.render(escena,camara);
+renderer.loop(escena,camara);
 }
 
 var escena, camara, renderer;
