@@ -38,7 +38,7 @@ document.body.appendChild(renderer.domElement);
 
 
 function loop(){
-requestAnimationFrame(render);<loop>
+requestAnimationFrame(render);<!--loop-->
 renderer.render(escena,camara);
 
 if(Math.abs(piernaD.rotation.z)>5)
