@@ -47,13 +47,15 @@ renderer.render(escena,camara);
 if(Math.abs(piernaD.rotation.z)>5)
 step=-step;
 
-var escena, camara, renderer;
-var step,piernaD,piernaI;
+
 
 piernaD.rotation.z+=step;
 piernaI.rotation.z-=step;
 
 }
+
+var escena, camara, renderer;
+var step,piernaD,piernaI;
 
 setup();
 loop();
