@@ -35,22 +35,19 @@ renderer.setSize(window.innerWidth*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
-
+var escena, camara, renderer;
+var step,piernaD,piernaI;
 
 function loop(){
 requestAnimationFrame(loop);<!--loop-->
+renderer.render(escena,camara);
 
 if(Math.abs(piernaD.rotation.z)>5)
 step=-step;
 
 piernaD.rotation.z+=step;
 piernaI.rotation.z-=step;
-
-renderer.loop(escena,camara);
 }
-
-var escena, camara, renderer;
-var step,piernaD,piernaI;
 
 setup();
 loop();
