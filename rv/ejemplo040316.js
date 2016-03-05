@@ -14,8 +14,6 @@ this.add(this.pie);
 Pierna.prototype=new THREE.Object3D();
 
 function setup(){
-var escena, camara, renderer;
-var step,piernaD,piernaI; 
 
 var cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10));
 piernaD = new Pierna();
@@ -48,6 +46,9 @@ renderer.render(escena,camara);
 
 if(Math.abs(piernaD.rotation.z)>5)
 step=-step;
+
+var escena, camara, renderer;
+var step,piernaD,piernaI;
 
 piernaD.rotation.z+=step;
 piernaI.rotation.z-=step;
