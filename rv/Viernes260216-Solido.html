@@ -24,7 +24,7 @@ var camara, escena, renderer;
   for (var i = 0; i<25; i++){
   puntos.push(new THREE.Vector2(
     
-								Math.sin(i*.02)*20+50,
+								i*20+50,
   								(i-5)*2));}
   var forma =new THREE.LatheGeometry(puntos);
   var malla=new THREE.Mesh(forma);
