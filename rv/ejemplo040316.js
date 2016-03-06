@@ -12,19 +12,16 @@ this.add(this.pie);
 }
 
 Pierna.prototype=new THREE.Object3D();
-var step,piernaD,piernaI;
 
 function setup(){
-  
 var cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10));
 piernaD = new Pierna();
 piernaI = new Pierna();
 cuerpo.position.y=2;
 piernaD.position.z=-1;
 piernaI.position.z=1;
-step=.01;
+step=0.01;
 
-var escena, camara, renderer;
 escena=new THREE.Scene();
 escena.add(cuerpo);
 escena.add(piernaD);
@@ -32,7 +29,7 @@ escena.add(piernaI);
 camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
 
-var renderer =new THREE.WebGLRenderer();
+renderer =new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
@@ -40,14 +37,16 @@ document.body.appendChild(renderer.domElement);
 function loop(){
 
 requestAnimationFrame(loop);<!--loop-->
-
+renderer.render(escena,camara);
 if(Math.abs(piernaD.rotation.z)>5)
 step=-step;
 
 piernaD.rotation.z+=step;
 piernaI.rotation.z-=step;
-renderer.render(escena,camara);
+
 }
+var escena, camara, renderer;
+var step,piernaD,piernaI;
 
 setup();
 loop();
