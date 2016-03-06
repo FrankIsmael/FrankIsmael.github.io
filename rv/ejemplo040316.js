@@ -14,6 +14,8 @@ this.add(this.pie);
 Pierna.prototype=new THREE.Object3D();
 
 function setup(){
+  
+var step,piernaD,piernaI;
 
 var cuerpo=new THREE.Mesh(new THREE.CylinderGeometry(1,2,5,10));
 piernaD = new Pierna();
@@ -35,7 +37,7 @@ var renderer =new THREE.WebGLRenderer();
 renderer.setSize(window.innerHeight*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
-var step,piernaD,piernaI;
+
 function loop(){
 
 requestAnimationFrame(loop);<!--loop-->
