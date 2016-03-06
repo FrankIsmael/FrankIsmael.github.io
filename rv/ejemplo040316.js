@@ -23,12 +23,12 @@ piernaD.position.z=-1;
 piernaI.position.z=1;
 step=.01;
 
-
+var escena, camara, renderer;
 escena=new THREE.Scene();
 escena.add(cuerpo);
 escena.add(piernaD);
 escena.add(piernaI);
-var camara=new THREE.PerspectiveCamera();
+camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
 
 var renderer =new THREE.WebGLRenderer();
@@ -42,14 +42,15 @@ function loop(){
 requestAnimationFrame(loop);<!--loop-->
 renderer.render(escena,camara);
 
+var step,piernaD,piernaI;
+
 if(Math.abs(piernaD.rotation.z)>5)
 step=-step;
 
 piernaD.rotation.z+=step;
 piernaI.rotation.z-=step;
 
-var escena, camara, renderer;
-var step,piernaD,piernaI;
+
 }
 
 setup();
