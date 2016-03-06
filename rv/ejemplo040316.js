@@ -24,8 +24,6 @@ piernaI.position.z=1;
 step=.01;
 
 
-var step,piernaD,piernaI;
-
 escena=new THREE.Scene();
 escena.add(cuerpo);
 escena.add(piernaD);
@@ -38,7 +36,7 @@ renderer.setSize(window.innerWidth*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
-
+var step,piernaD,piernaI;
 function loop(){
 var escena, camara, renderer;
 requestAnimationFrame(loop);<!--loop-->
