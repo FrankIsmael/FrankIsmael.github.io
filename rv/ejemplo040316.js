@@ -37,10 +37,8 @@ document.body.appendChild(renderer.domElement);
 }
 
 function loop(){
-requestAnimationFrame(loop);<!--loop-->
-
-
 var step,piernaD,piernaI;
+requestAnimationFrame(loop);<!--loop-->
 
 if(Math.abs(piernaD.rotation.z)>5)
 step=-step;
