@@ -38,9 +38,9 @@ renderer.setSize(window.innerWidth*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
-var escena, camara, renderer;
-function loop(){
 
+function loop(){
+var escena, camara, renderer;
 requestAnimationFrame(loop);<!--loop-->
 renderer.render(escena,camara);
 
