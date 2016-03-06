@@ -24,8 +24,8 @@ var camara, escena, renderer;
   for (var i = 0; i<12.56; i++){
   puntos.push(new THREE.Vector2(
     
-					(Math.sin(i*0.2)*30+50),
-  					i*2+5));}
+					(Math.sin(i)*30+50),
+  					i*5));}
   var forma =new THREE.LatheGeometry(puntos);
   var malla=new THREE.Mesh(forma);
   escena.add(malla);
@@ -33,7 +33,7 @@ var camara, escena, renderer;
   function render(){
     requestAnimationFrame(render);
     malla.rotation.x +=0.01;
-    malla.rotation.z +=0.01;
+    malla.rotation.y +=0.01;
     renderer.render(escena,camara);
   }
   render();
