@@ -37,11 +37,11 @@ renderer.setSize(window.innerWidth*.95,window.innerHeight*.95);
 document.body.appendChild(renderer.domElement);
 }
 
-
-
-function loop(){
 var escena, camara, renderer;
 var step,piernaD,piernaI;
+
+function loop(){
+
 requestAnimationFrame(loop);<!--loop-->
 renderer.render(escena,camara);
 
