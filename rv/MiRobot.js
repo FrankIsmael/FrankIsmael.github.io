@@ -81,10 +81,10 @@ escena.add(malla);
 // Se inicializa la camara y el renderer 
 
 camara = new THREE.PerspectiveCamera();
-camara.position.z=10;
+camara.position.z=20;
 
 renderer=new THREE.WebGLRenderer();
-renderer.setSize(window.innerHeight*1.8, window.innerHeight*1.6);
+renderer.setSize(window.innerHeight*1.4, window.innerHeight*1.4);
 document.body.appendChild(renderer.domElement);
 }
 
