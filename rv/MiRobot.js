@@ -30,9 +30,9 @@ var brazD = new THREE.Mesh(cilinfroFormaBrazo1);
 Cuello.position.y=2.5;
 esfera1.position.y=2.5;
 Antena1.position.x=-1;
-Antena1.position.y=4;
+Antena1.position.y=4.5;
 Antena2.position.x=1;
-Antena2.position.y=4;
+Antena2.position.y=4.5;
 
 PieI.position.x=-1;
 PieI.position.y=-2.5;
@@ -42,15 +42,15 @@ PieD.position.y=-2.5;
 brazI.rotation.z=90*Math.PI/180;
 brazD.rotation.z=90*Math.PI/180;
 
-brazI.position.x=-2.5;
+brazI.position.x=-2.7;
 brazI.position.y=1.8;
-brazD.position.x=2.5;
+brazD.position.x=2.7;
 brazD.position.y=1.8;
 
-BrazoI.position.x=-2.9;
-BrazoI.position.y=1.25;
-BrazoD.position.x=2.9;
-BrazoD.position.y=1.25;
+BrazoI.position.x=-3.1;
+BrazoI.position.y=0.65;
+BrazoD.position.x=3.1;
+BrazoD.position.y=0.65;
 
 // se genera una forma geometrica abstracta
 
