@@ -28,11 +28,11 @@ var brazD = new THREE.Mesh(cilinfroFormaBrazo1);
 // Se desplazan las mallas
 
 Cuello.position.y=2.5;
-esfera1.position.y=3;
+esfera1.position.y=2.95;
 Antena1.position.x=-1;
-Antena1.position.y=5.5;
+Antena1.position.y=4;
 Antena2.position.x=1;
-Antena2.position.y=5.5;
+Antena2.position.y=4;
 
 PieI.position.x=-1;
 PieI.position.y=-2.5;
@@ -42,14 +42,14 @@ PieD.position.y=-2.5;
 brazI.rotation.z=90*Math.PI/180;
 brazD.rotation.z=90*Math.PI/180;
 
-brazI.position.x=-2;
+brazI.position.x=-2.5;
 brazI.position.y=2.3;
-brazD.position.x=2;
+brazD.position.x=2.5;
 brazD.position.y=2.3;
 
-BrazoI.position.x=-2.25;
+BrazoI.position.x=-2.75;
 BrazoI.position.y=1.25;
-BrazoD.position.x=2.25;
+BrazoD.position.x=2.75;
 BrazoD.position.y=1.25;
 
 // se genera una forma geometrica abstracta
@@ -84,7 +84,7 @@ camara = new THREE.PerspectiveCamera();
 camara.position.z=20;
 
 renderer=new THREE.WebGLRenderer();
-renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
+renderer.setSize(window.innerHeight*.75, window.innerHeight*.75);
 document.body.appendChild(renderer.domElement);
 }
 
