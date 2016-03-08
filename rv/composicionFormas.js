@@ -11,7 +11,7 @@ var cilindroForma= new THREE.CylinderGeometry(0.5,0.5,4);
  //se desplazan las mallas
  
  esfera1.position.y=2;
- cilindro.rotation.z=( 20*Math.PI/180);
+ cilindro.rotation.z=90;
  //esfera2.position.y=-2;
  
  //se genera una forma geometria abstracta
@@ -34,7 +34,7 @@ var cilindroForma= new THREE.CylinderGeometry(0.5,0.5,4);
  //se inicializa la camara y el renderet
  
  camara= new THREE.PerspectiveCamera();
- camara.position.z=30;
+ camara.position.z=10;
  
  renderer= new THREE.WebGLRenderer();
  renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
