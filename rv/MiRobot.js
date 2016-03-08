@@ -5,10 +5,10 @@ var esferaForma= new THREE.SphereGeometry(2,32,32,0,6.3,0,1.575);
 var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2, 2, 5, 64, 64, 0, 0, 6.3);
 //2, 2, 5, 64, 64, 0, 0, 6.3
 var cilinfroFormaAntena= new THREE.CylinderGeometry(0.1,0.1,0.7);
-var cilinfroFormaCuello= new THREE.CylinderGeometry(1.8,1.8,0.7);
-var cilinfroFormaPie= new THREE.CylinderGeometry(0.2,0.2,2);
-var cilinfroFormaBrazo= new THREE.CylinderGeometry(0.2,0.2,2.5);
-var cilinfroFormaBrazo1= new THREE.CylinderGeometry(0.1,0.1,0.5);
+var cilinfroFormaCuello= new THREE.CylinderGeometry(1.8,1.8,0.45,64,64,0,0,6.3);
+var cilinfroFormaPie= new THREE.CylinderGeometry(0.4,0.4,3.1);
+var cilinfroFormaBrazo= new THREE.CylinderGeometry(0.4,0.4,2.5);
+var cilinfroFormaBrazo1= new THREE.CylinderGeometry(0.2,0.2,0.5);
 
 // para generar una forma combinada se requiere de las mallas
 //para poder desplazar las formas en el espacio virtual
@@ -48,9 +48,9 @@ brazD.position.x=2;
 brazD.position.y=2.3;
 
 BrazoI.position.x=-2.25;
-BrazoI.position.y=1.05;
+BrazoI.position.y=1.25;
 BrazoD.position.x=2.25;
-BrazoD.position.y=1.05;
+BrazoD.position.y=1.25;
 
 // se genera una forma geometrica abstracta
 
