@@ -58,7 +58,7 @@ var forma = new THREE.Geometry();
 // se utiliza el paquete GeometryUtils para conjuntar las formas 
 THREE.GeometryUtils.merge(forma,esfera1);
 THREE.GeometryUtils.merge(forma,Cuerpo);
-THREE.GeometryUtils.merge(forma,Antena1;
+THREE.GeometryUtils.merge(forma,Antena1);
 THREE.GeometryUtils.merge(forma,Antena2);
 THREE.GeometryUtils.merge(forma,Cuello);
 THREE.GeometryUtils.merge(forma,PieI);
