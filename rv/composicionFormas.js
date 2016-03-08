@@ -11,9 +11,8 @@ var cilindroForma= new THREE.CylinderGeometry(0.5,0.5,4);
  //se desplazan las mallas
  
  esfera1.position.y=2;
- cilindro.rotation.z=90*Math.PI/180;
- cilindro.position.y=2;
- //esfera2.position.y=-2;
+ esfera1.rotation.y+=0.01;
+ esfera2.position.y=-2;
  
  //se genera una forma geometria abstracta
  
