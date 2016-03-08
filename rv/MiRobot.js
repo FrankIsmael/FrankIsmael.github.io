@@ -92,7 +92,7 @@ requestAnimationFrame(loop);
 // Las rotaciones son sobre los ejes que estan fijos en la malla,
 // no los ejes del lienzo, inicialmente ambos coinciden
 
-malla.rotation.y+=o.01;
+malla.rotation.y+=0.01;
 
 renderer.render(escena,camara);
 }
