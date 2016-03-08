@@ -4,8 +4,8 @@ function setup(){
 var esferaForma= new THREE.SphereGeometry(2,32,32,0,6.3,0,1.575);
 var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2, 2, 5, 64, 64, 0, 0, 6.3);
 //2, 2, 5, 64, 64, 0, 0, 6.3
-var cilinfroFormaAntena= new THREE.CylinderGeometry(0.3,0.3,0.5);
-var cilinfroFormaCuello= new THREE.CylinderGeometry(1.8,1.8,1);
+var cilinfroFormaAntena= new THREE.CylinderGeometry(0.1,0.1,0.7);
+var cilinfroFormaCuello= new THREE.CylinderGeometry(1.8,1.8,0.7);
 var cilinfroFormaPie= new THREE.CylinderGeometry(0.2,0.2,2);
 var cilinfroFormaBrazo= new THREE.CylinderGeometry(0.2,0.2,2.5);
 var cilinfroFormaBrazo1= new THREE.CylinderGeometry(0.1,0.1,0.5);
@@ -47,10 +47,10 @@ brazI.position.y=2.3;
 brazD.position.x=2;
 brazD.position.y=2.3;
 
-BrazoI.position.x=-2.5;
-BrazoI.position.y=2.3;
-BrazoD.position.x=2.5;
-BrazoD.position.y=2.3;
+BrazoI.position.x=-2.25;
+BrazoI.position.y=1.05;
+BrazoD.position.x=2.25;
+BrazoD.position.y=1.05;
 
 // se genera una forma geometrica abstracta
 
@@ -84,7 +84,7 @@ camara = new THREE.PerspectiveCamera();
 camara.position.z=20;
 
 renderer=new THREE.WebGLRenderer();
-renderer.setSize(window.innerHeight*1.4, window.innerHeight*1.4);
+renderer.setSize(window.innerHeight*1, window.innerHeight*1);
 document.body.appendChild(renderer.domElement);
 }
 
