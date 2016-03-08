@@ -27,7 +27,7 @@ var brazD = new THREE.Mesh(cilinfroFormaBrazo1);
 // Se desplazan las mallas
 
 Cuello.position.y=2.5;
-esfera1.position.y=3.5;
+esfera1.position.y=3;
 Antena1.position.x=-1;
 Antena1.position.y=5.5;
 Antena2.position.x=1;
@@ -83,7 +83,7 @@ camara = new THREE.PerspectiveCamera();
 camara.position.z=10;
 
 renderer=new THREE.WebGLRenderer();
-renderer.setSize(window.innerHeight*.140, window.innerHeight*.140);
+renderer.setSize(window.innerHeight*140, window.innerHeight*140);
 document.body.appendChild(renderer.domElement);
 }
 
