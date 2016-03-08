@@ -10,8 +10,8 @@ var cilindroForma= new THREE.CylinderGeometry(0.5,0.5,4);
   var cilindro = new THREE.Mesh(cilindroForma);
  //se desplazan las mallas
  
- esfera1.position.y=2;
- esfera2.position.y=-2;
+ esfera1.position.y=1;
+ esfera2.position.y=-1;
  
  //se genera una forma geometria abstracta
  
