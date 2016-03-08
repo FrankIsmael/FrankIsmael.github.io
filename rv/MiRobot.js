@@ -1,7 +1,7 @@
 function setup(){
 // se plantean las geometrias
 
-var esferaForma= new THREE.SphereGeometry(2,32,32,0,3.15,0,3.15);
+var esferaForma= new THREE.SphereGeometry(2,32,32,0,6.3,0,1.575);
 var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2,2,5);
 var cilinfroFormaAntena= new THREE.CylinderGeometry(0.3,0.3,0.5);
 var cilinfroFormaCuello= new THREE.CylinderGeometry(1.8,1.8,1);
@@ -83,7 +83,7 @@ camara = new THREE.PerspectiveCamera();
 camara.position.z=10;
 
 renderer=new THREE.WebGLRenderer();
-renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
+renderer.setSize(window.innerHeight*.140, window.innerHeight*.140);
 document.body.appendChild(renderer.domElement);
 }
 
