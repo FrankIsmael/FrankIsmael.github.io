@@ -1,8 +1,8 @@
 function setup(){
 // se plantean las geometrias
 
-var esferaForma= new THREE.SphereGeometry(2,32,32,0,6.3,0,1.575);
-var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2, 2, 5, 64, 64, 0, 0, 6.3);
+var esferaForma= new THREE.SphereGeometry(2.5,32,32,0,6.3,0,1.575);
+var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2.5, 2.5, 4.5, 64, 64, 0, 0, 6.3);
 //2, 2, 5, 64, 64, 0, 0, 6.3
 var cilinfroFormaAntena= new THREE.CylinderGeometry(0.1,0.1,0.7);
 var cilinfroFormaCuello= new THREE.CylinderGeometry(1.8,1.8,0.45,64,64,0,0,6.3);
@@ -28,7 +28,7 @@ var brazD = new THREE.Mesh(cilinfroFormaBrazo1);
 // Se desplazan las mallas
 
 Cuello.position.y=2.5;
-esfera1.position.y=2.95;
+esfera1.position.y=2.5;
 Antena1.position.x=-1;
 Antena1.position.y=4;
 Antena2.position.x=1;
