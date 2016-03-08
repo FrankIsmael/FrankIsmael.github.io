@@ -27,12 +27,12 @@ var brazD = new THREE.Mesh(cilinfroFormaBrazo1);
 
 // Se desplazan las mallas
 
-Cuello.position.y=2.5;
-esfera1.position.y=2.5;
+Cuello.position.y=2.25;
+esfera1.position.y=2.25;
 Antena1.position.x=-1;
-Antena1.position.y=4.5;
+Antena1.position.y=4.75;
 Antena2.position.x=1;
-Antena2.position.y=4.5;
+Antena2.position.y=4.75;
 
 PieI.position.x=-1;
 PieI.position.y=-2.5;
