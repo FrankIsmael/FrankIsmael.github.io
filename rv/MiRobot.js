@@ -2,12 +2,12 @@ function setup(){
 // se plantean las geometrias
 
 var esferaForma= new THREE.SphereGeometry(2,32,32,0,3.15,0,3.15);
-var cilinfroFormaCuerpo= new THREE.CylinderGeomeyry(2,2,5);
-var cilinfroFormaAntena= new THREE.CylinderGeomeyry(0.3,0.3,0.5);
-var cilinfroFormaCuello= new THREE.CylinderGeomeyry(1.8,1.8,1);
-var cilinfroFormaPie= new THREE.CylinderGeomeyry(0.2,0.2,2);
-var cilinfroFormaBrazo= new THREE.CylinderGeomeyry(0.2,0.2,2.5);
-var cilinfroFormaBrazo1= new THREE.CylinderGeomeyry(0.1,0.1,0.5);
+var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2,2,5);
+var cilinfroFormaAntena= new THREE.CylinderGeometry(0.3,0.3,0.5);
+var cilinfroFormaCuello= new THREE.CylinderGeometry(1.8,1.8,1);
+var cilinfroFormaPie= new THREE.CylinderGeometry(0.2,0.2,2);
+var cilinfroFormaBrazo= new THREE.CylinderGeometry(0.2,0.2,2.5);
+var cilinfroFormaBrazo1= new THREE.CylinderGeometry(0.1,0.1,0.5);
 
 // para generar una forma combinada se requiere de las mallas
 //para poder desplazar las formas en el espacio virtual
