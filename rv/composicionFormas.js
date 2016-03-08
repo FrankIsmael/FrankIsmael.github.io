@@ -46,7 +46,7 @@ var cilindroForma= new THREE.CylinderGeometry(0.5,0.5,4);
   //Es importante notar que las rotaciones son sobre los ejes que  estan fijos a la malla, no los ejees del lienzo, inicialmente ambos coincide
   
 malla.rotation.x +=0.01;
-  malla.rotation.y +=0.01;
+  //malla.rotation.y +=0.01;
   
   renderer.render(escena,camara);
 }
