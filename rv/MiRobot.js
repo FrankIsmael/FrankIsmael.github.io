@@ -43,13 +43,13 @@ brazI.rotation.z=90*Math.PI/180;
 brazD.rotation.z=90*Math.PI/180;
 
 brazI.position.x=-2.5;
-brazI.position.y=2.3;
+brazI.position.y=1.8;
 brazD.position.x=2.5;
-brazD.position.y=2.3;
+brazD.position.y=1.8;
 
-BrazoI.position.x=-2.75;
+BrazoI.position.x=-2.9;
 BrazoI.position.y=1.25;
-BrazoD.position.x=2.75;
+BrazoD.position.x=2.9;
 BrazoD.position.y=1.25;
 
 // se genera una forma geometrica abstracta
