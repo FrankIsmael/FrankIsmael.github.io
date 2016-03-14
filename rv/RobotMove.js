@@ -11,8 +11,8 @@ Pierna.prototype=new THREE.Object3D();
 function setup(){
 piernaD = new Pierna();
 piernaI = new Pierna();
-piernaD.position.z=-1;
-piernaI.position.z=1;
+piernaI.position.z=-1;
+piernaD.position.z=1;
 step=0.01;
 // se plantean las geometrias
 
