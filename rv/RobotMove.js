@@ -4,7 +4,6 @@ this.pierna= new THREE.CylinderGeometry(0.5,0.5,1.8);
 
 this.pierna.position.y=-2.5;
 this.add(this.pierna);
-
 }
 
 Pierna.prototype=new THREE.Object3D();
