@@ -1,6 +1,6 @@
 function Pierna(){
 THREE.Object3D.call(this);
-this.pierna=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8),new THREE.MeshLambertMaterial( {color: 0xCC0000} ));
+this.pierna=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8),new THREE.MeshNormalMaterial();
 //new THREE.MeshLambertMaterial();
 this.pierna.position.y=-2.5;
 this.add(this.pierna);
@@ -9,7 +9,7 @@ this.add(this.pierna);
 Pierna.prototype=new THREE.Object3D();
 
 function setup(){
- var material = new THREE.MeshLambertMaterial( {color: 0xCC0000} );
+ var material = new THREE.MeshNormaltMaterial();
 piernaD = new Pierna();
 piernaI = new Pierna();
 piernaI.position.z=-1;
