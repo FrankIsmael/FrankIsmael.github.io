@@ -1,6 +1,6 @@
 function Pierna(){
 THREE.Object3D.call(this);
-this.pierna=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8));
+this.pierna=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8),new THREE.MeshNormalMaterial(  ));
 
 this.pierna.position.y=-2.5;
 this.add(this.pierna);
@@ -9,6 +9,7 @@ this.add(this.pierna);
 Pierna.prototype=new THREE.Object3D();
 
 function setup(){
+ var material = new THREE.MeshNormalMaterial(  );
 piernaD = new Pierna();
 piernaI = new Pierna();
 piernaI.position.z=-1;
@@ -28,17 +29,17 @@ var cilinfroFormaBrazo1= new THREE.CylinderGeometry(0.33,0.33,0.4);
 // para generar una forma combinada se requiere de las mallas
 //para poder desplazar las formas en el espacio virtual
 
-var esfera1=new THREE.Mesh(esferaForma);
-var Cuerpo=new THREE.Mesh(cilinfroFormaCuerpo);
-var Antena1 = new THREE.Mesh(cilinfroFormaAntena);
-var Antena2 = new THREE.Mesh(cilinfroFormaAntena);
-var Cuello = new THREE.Mesh(cilinfroFormaCuello);
+var esfera1=new THREE.Mesh(esferaForma,material);
+var Cuerpo=new THREE.Mesh(cilinfroFormaCuerpo,,material);
+var Antena1 = new THREE.Mesh(cilinfroFormaAntena,material);
+var Antena2 = new THREE.Mesh(cilinfroFormaAntena,material);
+var Cuello = new THREE.Mesh(cilinfroFormaCuello,material);
 //var PieI = new THREE.Mesh(cilinfroFormaPie);
 //var PieD = new THREE.Mesh(cilinfroFormaPie);
-var BrazoI = new THREE.Mesh(cilinfroFormaBrazo);
-var BrazoD = new THREE.Mesh(cilinfroFormaBrazo);
-var brazI = new THREE.Mesh(cilinfroFormaBrazo1);
-var brazD = new THREE.Mesh(cilinfroFormaBrazo1);
+var BrazoI = new THREE.Mesh(cilinfroFormaBrazo,material);
+var BrazoD = new THREE.Mesh(cilinfroFormaBrazo,material);
+var brazI = new THREE.Mesh(cilinfroFormaBrazo1,material);
+var brazD = new THREE.Mesh(cilinfroFormaBrazo1,material);
 
 // Se desplazan las mallas
 
