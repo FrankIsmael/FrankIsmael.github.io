@@ -70,8 +70,8 @@ THREE.GeometryUtils.merge(forma,brazI);
 THREE.GeometryUtils.merge(forma,brazD);
 
 // se genera la malla a partir de la forma
-
-malla=new THREE.Mesh(forma);
+var material =new THREE.MeshNormalMaterial();
+ malla= new THREE.Mesh(forma, material);
 
 // se inicializa la escena y se agrega la malla 
 
