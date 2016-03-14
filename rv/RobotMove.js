@@ -1,7 +1,7 @@
 function Pierna(){
 THREE.Object3D.call(this);
-this.pierna=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8),new THREE.MeshNormalMaterial(  ));
-
+this.pierna=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8),new THREE.MeshLambertMaterial(  ));
+//new THREE.MeshLambertMaterial();
 this.pierna.position.y=-2.5;
 this.add(this.pierna);
 }
