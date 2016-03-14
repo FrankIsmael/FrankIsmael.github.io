@@ -9,7 +9,7 @@ this.add(this.pierna);
 Pierna.prototype=new THREE.Object3D();
 
 function setup(){
- var material = new THREE.MeshNormalMaterial(  );
+ var material = new THREE.MeshLambertMaterial( {color: 0xCC0000} );
 piernaD = new Pierna();
 piernaI = new Pierna();
 piernaI.position.z=-1;
