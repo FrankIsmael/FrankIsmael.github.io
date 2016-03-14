@@ -1,6 +1,6 @@
 function Pierna(){
 THREE.Object3D.call(this);
-this.pierna= new THREE.CylinderGeometry(0.5,0.5,1.8);
+this.pierna=new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8));
 
 this.pierna.position.y=-2.5;
 this.add(this.pierna);
