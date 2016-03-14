@@ -30,7 +30,7 @@ var cilinfroFormaBrazo1= new THREE.CylinderGeometry(0.33,0.33,0.4);
 //para poder desplazar las formas en el espacio virtual
 
 var esfera1=new THREE.Mesh(esferaForma,material);
-var Cuerpo=new THREE.Mesh(cilinfroFormaCuerpo,,material);
+var Cuerpo=new THREE.Mesh(cilinfroFormaCuerpo,material);
 var Antena1 = new THREE.Mesh(cilinfroFormaAntena,material);
 var Antena2 = new THREE.Mesh(cilinfroFormaAntena,material);
 var Cuello = new THREE.Mesh(cilinfroFormaCuello,material);
