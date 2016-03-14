@@ -70,7 +70,7 @@ THREE.GeometryUtils.merge(forma,brazI);
 THREE.GeometryUtils.merge(forma,brazD);
 
 // se genera la malla a partir de la forma
-var material= new THREE.MeshPhongMaterial( { color: 0x3fce21, specular: 0x009900, shininess: 30, shading: THREE.FlatShading } ) ;
+var material= new THREE.MeshLambertMaterial( { color: 0x3fce21} ) ;
 
 //new THREE.MeshPhongMaterial(#3fce21);-->
  malla= new THREE.Mesh(forma, material);
