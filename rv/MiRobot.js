@@ -94,6 +94,7 @@ requestAnimationFrame(loop);
 // no los ejes del lienzo, inicialmente ambos coinciden
 
 malla.rotation.y+=0.01;
+malla.rotation.z+=0.01;
 
 renderer.render(escena,camara);
 }
