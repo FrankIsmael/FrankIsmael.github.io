@@ -70,7 +70,7 @@ THREE.GeometryUtils.merge(forma,brazI);
 THREE.GeometryUtils.merge(forma,brazD);
 
 // se genera la malla a partir de la forma
-var material =new THREE.MeshNormalMaterial();
+var material =new THREE.MeshPhongMaterial(#3fce21);
  malla= new THREE.Mesh(forma, material);
 
 // se inicializa la escena y se agrega la malla 
@@ -94,7 +94,6 @@ requestAnimationFrame(loop);
 // no los ejes del lienzo, inicialmente ambos coinciden
 
 malla.rotation.y+=0.01;
-malla.rotation.z+=0.01;
 
 renderer.render(escena,camara);
 }
