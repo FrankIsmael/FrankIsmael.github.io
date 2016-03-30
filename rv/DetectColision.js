@@ -11,7 +11,7 @@ camara.position.z=5;
 // en THREE.js se usa Raycaster()
 
 raycaster = new THREE.Raycaster();
-raycaster.setFromCamera(new THREE.Vector2(0,0),camera);
+raycaster.setFromCamera(new THREE.Vector2(0,0),camara);
 
 escena = new THREE.Scene();
 escena.add(cubo1);
