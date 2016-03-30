@@ -16,7 +16,7 @@ camara.position.z=20;
 // en THREE.js se usa Raycaster()
 
 raycaster1 = new THREE.Raycaster(pelota.position, new THREE.Vector3(1,0,0));
-raycaster1 = new THREE.Raycaster(pelota.position, new THREE.Vector3(-1,0,0));
+raycaster2 = new THREE.Raycaster(pelota.position, new THREE.Vector3(-1,0,0));
 
 escena = new THREE.Scene();
 escena.add(cubo1);
