@@ -7,8 +7,8 @@ cubo1=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),
 pelota=new THREE.Mesh(new THREE.SphereGeometry(0.5),
                 new THREE.MeshNormalMaterial());
                 
-cubo1.position.x=0.7;
-cubo2.position.x=-0.7;
+cubo1.position.x=7;
+cubo2.position.x=-7;
 
 camara=new THREE.PerspectiveCamera();
 camara.position.z=20;
@@ -34,8 +34,8 @@ function loop(){
 obstaculo1= raycaster1.intersectObject(cubo1);
 obstaculo2= raycaster2.intersectObject(cubo2);
 
-if((obstaculo1.length>0 && (obstaculo[0].distance <= 0.05)) || 
-  (obstaculo1.length>0 && (obstaculo[0].distance <= 0.05)))
+if((obstaculo1.length>0 && (obstaculo1[0].distance <= 0.05)) || 
+  (obstaculo2.length>0 && (obstaculo2[0].distance <= 0.05)))
   step = -step;
   
   pelota.position.x=step;
