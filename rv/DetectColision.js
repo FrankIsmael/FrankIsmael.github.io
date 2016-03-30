@@ -27,11 +27,11 @@ step=0.01;
 function loop(){
 var intersects = raycaster.intersectObjects(escena.children);
 if(intersects.length>0)step=-step;
-cubo1.rotation.x=step;
-cubo1.rotation.y=step;
+cubo1.rotation.x+=step;
+cubo1.rotation.y+=step;
 
-cubo2.rotation.x=step;
-cubo2.rotation.y=step;
+cubo2.rotation.x+=step;
+cubo2.rotation.y+=step;
 
 renderer.render(escena,camara);
 requestAnimationFrame(loop);
