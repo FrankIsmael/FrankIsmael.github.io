@@ -48,9 +48,9 @@ function setup(){
   mapa[23] ="x                    X";
   mapa[0]  ="xxxxxxxxxxxxxxxxxxxxxx";
 
-  enviroment = new Enviroment();
+  environment = new Enviroment();
   
-  enviroment.setMap(mapa);
+  environment.setMap(mapa);
   
   camera=new THREE.PerspectiveCamera();
   camera.position.z=30;
