@@ -14,7 +14,7 @@ function.Environment(){
 }
 
 Environment.prototype=new THREE.Scene();
-Environment.prototype.snese=function();{
+Environment.prototype.sense=function(){
 	for(var i=0; i<this.children.length; i++;){
 	if(this.children[i].sense !==undefined)
 	this.children[i].sense(this);
@@ -22,7 +22,7 @@ Environment.prototype.snese=function();{
 }
 
 
-Environment.prototype.plan=function();{
+Environment.prototype.plan=function(){
 	for(var i=0; i<this.children.length; i++;){
 	if(this.children[i].sense !==undefined)
 	this.children[i].sense(this);
@@ -30,7 +30,7 @@ Environment.prototype.plan=function();{
 }
 
 
-Environment.prototype.act=function();{
+Environment.prototype.act=function(){
 	for(var i=0; i<this.children.length; i++;){
 	if(this.children[i].sense !==undefined)
 	this.children[i].sense(this);
