@@ -48,7 +48,7 @@ function setup(){
   mapa[23] ="x                    X";
   mapa[0]  ="xxxxxxxxxxxxxxxxxxxxxx";
 
-  environment = new Enviroment();
+  environment = new Environment();
   
   environment.setMap(mapa);
   
