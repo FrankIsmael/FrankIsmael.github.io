@@ -8,7 +8,7 @@ function Wall(size,x,y){
   
 Wall.prototype=new THREE.Mesh();
 
-Enviroment.prototype.setMap=function(map){
+Environment.prototype.setMap=function(map){
   var _offset=Math.floor(map.length/2);
   
   for (var i=0;i<map.length;i++)
