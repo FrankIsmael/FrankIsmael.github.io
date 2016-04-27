@@ -9,7 +9,7 @@ malla.position.x += 0.25;
 var base = new THREE.Mesh( new THREE.BoxGeometry(5,.1,5),
 	   new THREE.MeshLambertMaterial({color: 0x00FF00}));
 
-var iluminacion= new THREE.Mesh( new THREE.PointLight(0xFFFFFF);
+var iluminacion= new THREE.Mesh( new THREE.PointLight(0xFFFFFF));
 iluminacion.position.y=20;
 
 escena = new.THREE.Scene();
