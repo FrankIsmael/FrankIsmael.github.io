@@ -29,7 +29,7 @@ document.body.appendChild (renderer.domElement);
 renderer.shadowMapEnabled = true;
 malla.castShadow = true;
 base.receiveShadow = true;
-Iluminacion.castShadow = true;
+iluminacion.castShadow = true;
 
 }
 
