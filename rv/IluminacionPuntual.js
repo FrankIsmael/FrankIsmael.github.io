@@ -26,7 +26,7 @@ renderer.setSize(window.innerHeight*.95, window.innerHeight*.95);
 document.body.appendChild (renderer.domElement);
 
 
-renderer.shadowMapEnabled = true;
+renderer.shadowMap.Enabled = true;
 malla.castShadow = true;
 base.receiveShadow = true;
 iluminacion.castShadow = true;
