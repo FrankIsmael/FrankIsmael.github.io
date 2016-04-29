@@ -1,19 +1,19 @@
 function ROBOTtexture(){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin = '';
- var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/TexturaMetalN.jpg');
+ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/textMetal.jpg.jpg');
  
  this.esfera= new THREE.Mesh(new THREE.SphereGeometry(2.5,100,100,0,6.3,0,1.57),new THREE.MeshPhongMaterial({map:textura}));
- this.Cuerpo= new THREE.Mesh(new THREE.CylinderGeometry(2.5, 2.5, 4.5),new THREE.MeshPhongMaterial({map:textura}));
+ this.Cuerpo= new THREE.Mesh(new THREE.CylinderGeometry(2.5, 2.5, 4.5,100),new THREE.MeshPhongMaterial({map:textura}));
  this.Antena1= new THREE.Mesh(new THREE.CylinderGeometry(0.1,0.1,0.7),new THREE.MeshPhongMaterial({map:textura}));
  this.Antena2= new THREE.Mesh(new THREE.CylinderGeometry(0.1,0.1,0.7),new THREE.MeshPhongMaterial({map:textura}));
  this.Cuello= new THREE.Mesh(new THREE.CylinderGeometry(2.3,2.3,0.3,64,64,0,0,6.3),new THREE.MeshPhongMaterial({map:textura}));
  this.PieI= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8),new THREE.MeshPhongMaterial({map:textura}));
  this.PieD= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8),new THREE.MeshPhongMaterial({map:textura}));
- this.BrazoI= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3.3,new THREE.MeshPhongMaterial({map:textura})));
- this.BrazoD= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3.3,new THREE.MeshPhongMaterial({map:textura})));
- this.brazI= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4,new THREE.MeshPhongMaterial({map:textura})));
- this.brazD= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4,new THREE.MeshPhongMaterial({map:textura})));
+ this.BrazoI= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3.3,new THREE.MeshPhongMaterial({map:textura}));
+ this.BrazoD= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3.3,new THREE.MeshPhongMaterial({map:textura}));
+ this.brazI= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4,new THREE.MeshPhongMaterial({map:textura}));
+ this.brazD= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4,new THREE.MeshPhongMaterial({map:textura}));
  
  this.Cuello.position.y=2.4;
  this.esfera.position.y=2.4;
