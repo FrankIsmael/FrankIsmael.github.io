@@ -179,7 +179,7 @@ function setup(){
  mapa[16] = "x                          x";
  mapa[17] = "x                          x";
  mapa[18] = "x                          x";
- mapa[19] = "x                         x";
+ mapa[19] = "x                          x";
  mapa[20] = "x                          x";
  mapa[21] = "x                          x";
  mapa[22] = "x                          x";
@@ -194,7 +194,7 @@ function setup(){
  entorno=new Environment();
  entorno.setMap(mapa);
  luzPuntual = new THREE.PointLight(0xffffff);
- luzPuntual.position.x=0;  
+ luzPuntual.position.x=10;  
  luzPuntual.position.y=10;
  luzPuntual.position.z=30;
  camara=new THREE.PerspectiveCamera();
