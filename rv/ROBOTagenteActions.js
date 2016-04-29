@@ -8,7 +8,7 @@ Sensor.prototype=new THREE.Raycaster();
 function RBA(x=0, y=0){
  Agent.call(this,x,y);
  THREE.ImageUtils.crossOrigin = '';
-var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/white.jpg');
+var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/linesrgb.jpg');
 
  this.esfera= new THREE.Mesh(new THREE.SphereGeometry(2.5,100,100,0,6.3,0,1.57),new THREE.MeshPhongMaterial({map:textura}));
  this.Cuerpo= new THREE.Mesh(new THREE.CylinderGeometry(2.5, 2.5, 4.5,100),new THREE.MeshPhongMaterial({map:textura}));
