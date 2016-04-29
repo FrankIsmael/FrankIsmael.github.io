@@ -17,7 +17,7 @@ piernaD.position.z=1;
 step=0.01;
 // se plantean las geometrias
 
-var esferaForma= new THREE.SphereGeometry(2.5,32,32,0,6.3,0,1.57);
+var esferaForma= new THREE.SphereGeometry(2.5,100,100,0,6.3,0,1.57);
 var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2.5, 2.5, 4.5);
 //2, 2, 5, 64, 64, 0, 0, 6.3
 var cilinfroFormaAntena= new THREE.CylinderGeometry(0.1,0.1,0.7);
