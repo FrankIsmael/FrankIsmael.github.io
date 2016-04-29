@@ -151,7 +151,7 @@ RBA.prototype.operations.RotarDerecha = function(robot,angulo){
  robot.rotation.z+=angulo;
 };
 
-BB8.prototype.operations.RotarIzquierda = function(robot,angulo){
+RBA.prototype.operations.RotarIzquierda = function(robot,angulo){
  if(angulo==undefined){
   angulo=Math.PI/2;
  }
