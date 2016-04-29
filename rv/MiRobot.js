@@ -1,8 +1,8 @@
 function setup(){
 // se plantean las geometrias
 
-var esferaForma= new THREE.SphereGeometry(2.5,32,32,0,6.3,0,1.57);
-var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2.5, 2.5, 4.5);
+var esferaForma= new THREE.SphereGeometry(2.5,100,100,0,6.3,0,1.57);
+var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2.5, 2.5, 4.5,100);
 //2, 2, 5, 64, 64, 0, 0, 6.3
 var cilinfroFormaAntena= new THREE.CylinderGeometry(0.1,0.1,0.7);
 var cilinfroFormaCuello= new THREE.CylinderGeometry(2.3,2.3,0.3,64,64,0,0,6.3);
