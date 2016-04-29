@@ -10,10 +10,10 @@ function ROBOTtexture(){
  this.Cuello= new THREE.Mesh(new THREE.CylinderGeometry(2.3,2.3,0.3,64,64,0,0,6.3),new THREE.MeshPhongMaterial({map:textura}));
  this.PieI= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8),new THREE.MeshPhongMaterial({map:textura}));
  this.PieD= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,1.8),new THREE.MeshPhongMaterial({map:textura}));
- this.BrazoI= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3.3,new THREE.MeshPhongMaterial({map:textura}));
- this.BrazoD= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3.3,new THREE.MeshPhongMaterial({map:textura}));
- this.brazI= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4,new THREE.MeshPhongMaterial({map:textura}));
- this.brazD= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4,new THREE.MeshPhongMaterial({map:textura}));
+ this.BrazoI= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3.3,100),new THREE.MeshPhongMaterial({map:textura}));
+ this.BrazoD= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3.3,100),new THREE.MeshPhongMaterial({map:textura}));
+ this.brazI= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4),new THREE.MeshPhongMaterial({map:textura}));
+ this.brazD= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4),new THREE.MeshPhongMaterial({map:textura}));
  
  this.Cuello.position.y=2.4;
  this.esfera.position.y=2.4;
