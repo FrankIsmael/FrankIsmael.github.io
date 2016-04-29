@@ -124,7 +124,7 @@ RBA.prototype.plan = function(environment){
    this.actuator.commands.push('Derecho');
 }
 
-BB8.prototype.act=function(environment){
+RBA.prototype.act=function(environment){
  var command=this.actuator.commands.pop();
  if(command==undefined)
   console.log('Undefined command');
