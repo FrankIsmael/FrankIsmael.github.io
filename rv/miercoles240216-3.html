@@ -33,7 +33,7 @@ canvas {width:100%;height:100%;}
   escena.add(torus);
   function render(){
     requestAnimationFrame(render);
-    torus.rotation.y+=0.1;
+    torus.rotation.z+=0.05;
     renderer.render(escena,camara);
   }
   render();
