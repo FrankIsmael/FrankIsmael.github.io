@@ -98,7 +98,7 @@ function Nave(){
 
     geometry.computeLineDistances();
 		  
-    var material = new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('mat1.jpg')});
+    var material = new THREE.MeshBasicMaterial({map: THREE.ImageUtils.loadTexture('white.jpg')});
 
         var glass =[
             new THREE.Vector2(0.0,0.5),
