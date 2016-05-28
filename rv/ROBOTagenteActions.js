@@ -45,8 +45,8 @@ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/wh
  this.PieD.position.x=1;
  this.PieD.position.y=-2.5;
 
- this.brazI.rotation.z=90*Math.PI/180;
- this.brazD.rotation.z=90*Math.PI/180;
+ /*this.brazI.rotation.z=90*Math.PI/180;
+ this.brazD.rotation.z=90*Math.PI/180;*/
  this.brazI.position.x=-2.7;
  this.brazI.position.y=1.8;
  this.brazD.position.x=2.7;
@@ -68,8 +68,8 @@ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/wh
  this.add(this.BrazoD);
  this.add(this.brazI);
  this.add(this.brazD);
-
 }
+Robot.prototype=new THREE.Object3D();
 
 function RBA(x=0, y=0){
  Agent.call(this,x,y);
