@@ -5,6 +5,7 @@ function Sensor(position,direction){
 Sensor.prototype=new THREE.Raycaster();
 
 function Robot(){
+ THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/white.jpg');
 
