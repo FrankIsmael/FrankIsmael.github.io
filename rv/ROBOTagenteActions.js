@@ -4,9 +4,7 @@ function Sensor(position,direction){
 }
 Sensor.prototype=new THREE.Raycaster();
 
-
-function RBA(x=0, y=0){
- Agent.call(this,x,y);
+function Robot(){
  THREE.ImageUtils.crossOrigin = '';
 var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/white.jpg');
 
@@ -22,7 +20,7 @@ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/wh
  this.brazI= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4),new THREE.MeshPhongMaterial({map:textura}));
  this.brazD= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4),new THREE.MeshPhongMaterial({map:textura}));
  
-  this.esfera.scale.set(.2,.2,.2);
+ /*this.esfera.scale.set(.2,.2,.2);
  this.Cuerpo.scale.set(.2,.2,.2);
  this.Antena1.scale.set(.2,.2,.2);
  this.Antena2.scale.set(.2,.2,.2);
@@ -32,7 +30,7 @@ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/wh
  this.BrazoI.scale.set(.2,.2,.2);
  this.BrazoD.scale.set(.2,.2,.2);
  this.brazI.scale.set(.2,.2,.2);
- this.brazD.scale.set(.2,.2,.2);
+ this.brazD.scale.set(.2,.2,.2);*/
  
  this.Cuello.position.y=2.4;
  this.esfera.position.y=2.4;
@@ -70,9 +68,17 @@ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/wh
  this.add(this.brazI);
  this.add(this.brazD);
 
+}
+
+function RBA(x=0, y=0){
+ Agent.call(this,x,y);
+ 
+ this.robot=new Robot();
+ this.add(this.robot);
+ 
  this.sensor=new Sensor();
  this.actuator=new Array();
- 
+ this.robot.scale.set(.2,.2,.2);
 }
 RBA.prototype=new Agent();
 
