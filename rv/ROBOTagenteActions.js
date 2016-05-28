@@ -45,6 +45,18 @@ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/wh
  this.BrazoD.position.x=3.1;
  this.BrazoD.position.y=0.65;
  
+ this.esfera.scale.set(.2,.2,.2);
+ this.Cuerpo.scale.set(.2,.2,.2);
+ this.Antena1.scale.set(.2,.2,.2);
+ this.Antena2.scale.set(.2,.2,.2);
+ this.Cuello.scale.set(.2,.2,.2);
+ this.PieI.scale.set(.2,.2,.2);
+ this.PieD.scale.set(.2,.2,.2);
+ this.BrazoI.scale.set(.2,.2,.2);
+ this.BrazoD.scale.set(.2,.2,.2);
+ this.brazI.scale.set(.2,.2,.2);
+ this.brazD.scale.set(.2,.2,.2);
+ 
  this.add(this.esfera);
  this.add(this.Cuerpo);
  this.add(this.Antena1);
@@ -60,18 +72,6 @@ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/wh
  this.sensor=new Sensor();
  this.actuator=new Array();
  
-
- this.esfera.scale.set(.2,.2,.2);
- this.Cuerpo.scale.set(.2,.2,.2);
- this.Antena1.scale.set(.2,.2,.2);
- this.Antena2.scale.set(.2,.2,.2);
- this.Cuello.scale.set(.2,.2,.2);
- this.PieI.scale.set(.2,.2,.2);
- this.PieD.scale.set(.2,.2,.2);
- this.BrazoI.scale.set(.2,.2,.2);
- this.BrazoD.scale.set(.2,.2,.2);
- this.brazI.scale.set(.2,.2,.2);
- this.brazD.scale.set(.2,.2,.2);
 }
 RBA.prototype=new Agent();
 
