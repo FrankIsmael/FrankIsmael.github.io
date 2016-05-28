@@ -150,7 +150,7 @@ RBA.prototype.operations.Derecho = function(robot,step){
   step=0.1;
  robot.position.x+=step*Math.cos(robot.rotation.z);
  robot.position.y+=step*Math.sin(robot.rotation.z);
- robot.ROBOT.rotation.z-=0.5;*/
+ robot.ROBOT.rotation.z-=0.5;
 };
 
 RBA.prototype.operations.RotarDerecha = function(robot,angulo){
