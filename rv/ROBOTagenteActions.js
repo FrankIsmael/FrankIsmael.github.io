@@ -74,12 +74,12 @@ Robot.prototype=new THREE.Object3D();
 function RBA(x=0, y=0){
  Agent.call(this,x,y);
  
- this.robot=new Robot();
- this.add(this.robot);
+ this.ROBOT=new Robot();
+ this.add(this.ROBOT);
  
  this.sensor=new Sensor();
  this.actuator=new Array();
- this.robot.scale.set(.2,.2,.2);
+ this.ROBOT.scale.set(.2,.2,.2);
 }
 RBA.prototype=new Agent();
 
