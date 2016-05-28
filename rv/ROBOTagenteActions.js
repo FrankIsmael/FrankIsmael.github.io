@@ -79,6 +79,7 @@ function RBA(x=0, y=0){
  
  this.sensor=new Sensor();
  this.actuator=new Array();
+ this.ROBOT.rotation.x=Math.PI/2;
  this.ROBOT.scale.set(.2,.2,.2);
 }
 RBA.prototype=new Agent();
@@ -149,7 +150,7 @@ RBA.prototype.operations.Derecho = function(robot,step){
   step=0.1;
  robot.position.x+=step*Math.cos(robot.rotation.z);
  robot.position.y+=step*Math.sin(robot.rotation.z);
- /*robot.Cuerpo.rotation.z-=0.5;*/
+ robot.ROBOT.rotation.z-=0.5;*/
 };
 
 RBA.prototype.operations.RotarDerecha = function(robot,angulo){
