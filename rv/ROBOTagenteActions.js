@@ -21,6 +21,19 @@ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/wh
  this.BrazoD= new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3.3,100),new THREE.MeshPhongMaterial({map:textura}));
  this.brazI= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4),new THREE.MeshPhongMaterial({map:textura}));
  this.brazD= new THREE.Mesh(new THREE.CylinderGeometry(0.33,0.33,0.4),new THREE.MeshPhongMaterial({map:textura}));
+ 
+  this.esfera.scale.set(.2,.2,.2);
+ this.Cuerpo.scale.set(.2,.2,.2);
+ this.Antena1.scale.set(.2,.2,.2);
+ this.Antena2.scale.set(.2,.2,.2);
+ this.Cuello.scale.set(.2,.2,.2);
+ this.PieI.scale.set(.2,.2,.2);
+ this.PieD.scale.set(.2,.2,.2);
+ this.BrazoI.scale.set(.2,.2,.2);
+ this.BrazoD.scale.set(.2,.2,.2);
+ this.brazI.scale.set(.2,.2,.2);
+ this.brazD.scale.set(.2,.2,.2);
+ 
  this.Cuello.position.y=2.4;
  this.esfera.position.y=2.4;
  this.Antena1.position.x=-1;
@@ -44,18 +57,6 @@ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/wh
  this.BrazoI.position.y=0.65;
  this.BrazoD.position.x=3.1;
  this.BrazoD.position.y=0.65;
- 
- this.esfera.scale.set(.2,.2,.2);
- this.Cuerpo.scale.set(.2,.2,.2);
- this.Antena1.scale.set(.2,.2,.2);
- this.Antena2.scale.set(.2,.2,.2);
- this.Cuello.scale.set(.2,.2,.2);
- this.PieI.scale.set(.2,.2,.2);
- this.PieD.scale.set(.2,.2,.2);
- this.BrazoI.scale.set(.2,.2,.2);
- this.BrazoD.scale.set(.2,.2,.2);
- this.brazI.scale.set(.2,.2,.2);
- this.brazD.scale.set(.2,.2,.2);
  
  this.add(this.esfera);
  this.add(this.Cuerpo);
