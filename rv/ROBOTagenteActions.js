@@ -83,7 +83,7 @@ function RBA(x=0, y=0){
  this.actuator=new Array();
  
  this.ROBOT.rotation.x=Math.PI/2;
- this.ROBOT.scale.set(.5,.5,.5);
+ this.ROBOT.scale.set(1,1,1);
 }
 RBA.prototype=new Agent();
 
@@ -109,17 +109,11 @@ Environment.prototype.setMap=function(map){
 
 RBA.prototype.sense=function(environment){
  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
- //this.sensor2.set(this.position, new THREE.Vector3(Math.sin(this.rotation.z),Math.cos(this.rotation.z),0));
  var obstaculo = this.sensor.intersectObjects(environment.children,true);
- //var obstaculo2 = this.sensor2.intersectObjects(environment.children,true);
  if ((obstaculo.length>0&&(obstaculo[0].distance<=1)))
   this.sensor.colision=true;
  else
   this.sensor.colision=false;
- /*if((obstaculo2.length>0&&(obstaculo2[0].distance<=1)))
-  this.sensor2.colision=true;
- else
-  this.sensor2.colision=false;*/
 }
 
 RBA.prototype.plan = function(environment){
@@ -200,7 +194,7 @@ function setup(){
  entorno=new Environment();
  entorno.setMap(mapa);
  luzPuntual = new THREE.PointLight(0xffffff);
- luzPuntual.position.x=10;  
+ luzPuntual.position.x=0;  
  luzPuntual.position.y=10;
  luzPuntual.position.z=30;
  camara=new THREE.PerspectiveCamera();
