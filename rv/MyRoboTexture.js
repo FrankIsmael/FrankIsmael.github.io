@@ -1,7 +1,7 @@
 function ROBOTtexture(){
  THREE.Object3D.call(this);
  THREE.ImageUtils.crossOrigin = '';
- var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/lazules.jpg');
+ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/fuegoazul.png');
  
  this.esfera= new THREE.Mesh(new THREE.SphereGeometry(2.5,100,100,0,6.3,0,1.57),new THREE.MeshPhongMaterial({map:textura}));
  this.Cuerpo= new THREE.Mesh(new THREE.CylinderGeometry(2.5, 2.5, 4.5,100),new THREE.MeshPhongMaterial({map:textura}));
