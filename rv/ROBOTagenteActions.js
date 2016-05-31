@@ -73,9 +73,10 @@ Robot.prototype=new THREE.Object3D();
 
 function RBA(x=0, y=0){
  Agent.call(this,x,y);
+ THREE.ImageUtils.crossOrigin = '';
  
  this.ROBOT=new Robot();
- this.ROBOT.rotation.z=0.25; 
+ this.ROBOT.rotation.z=-0.25; 
  this.add(this.ROBOT);
  
  this.sensor=new Sensor();
@@ -123,16 +124,10 @@ RBA.prototype.sense=function(environment){
 
 RBA.prototype.plan = function(environment){
  this.actuator.commands=[];
- /*if(this.sensor.colision==false && this.sensor2.colision==true)
-  this.actuator.commands.push('Derecho');
- else if(this.sensor.colision==true && this.sensor2.colision==true)
-   this.actuator.commands.push('RotarDerecha');
- else
-   this.actuator.commands.push('RotarIzquierda');*/
-  if(this.sensor.colision==true)
-   this.actuator.commands.push('RotarIzquierda');
-  else
+  if(this.sensor.colision==false)
    this.actuator.commands.push('Derecho');
+  else
+   this.actuator.commands.push('RotarIzquierda');
 }
 
 RBA.prototype.act=function(environment){
