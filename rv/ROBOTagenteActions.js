@@ -76,7 +76,7 @@ function RBA(x=0, y=0){
  THREE.ImageUtils.crossOrigin = '';
  
  this.ROBOT=new Robot();
- //this.ROBOT.rotation.z=0; 
+ this.ROBOT.rotation.z=0.05; 
  this.add(this.ROBOT);
  
  this.sensor=new Sensor();
