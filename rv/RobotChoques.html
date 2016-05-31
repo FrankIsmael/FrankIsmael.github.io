@@ -1,0 +1,299 @@
+﻿<!doctype.html>
+<html>
+	<head>
+	 <title>Ejemplo Detección de choques 4</title>
+	 <meta http-equiv="Content-Type"
+		content="text/html; charset=UTF-8">
+	 <style>
+	    body {margin:0;}
+	    canvas {width:100%;height:100%;}
+	 </style>
+	</head>
+	<body>
+	  <script src="three.min.js"> </script>
+	  <script>
+
+		var camara, escena, renderer;
+		escena= new THREE.Scene();
+		var fov = 100; //Campo de Vision (field of view), en grados
+		var aspect = window.innerWidth / window.innerHeight; //Relacion de aspecto
+		var near = .1; //Plano Cercano
+		var far = 1000; //Plano lejano
+		camara = new THREE.PerspectiveCamera( fov,
+							  aspect,
+						 	  near,
+							  far );
+		camara.position.x = 5;
+		camara.position.y = 5;
+		camara.position.z = 5;
+		renderer = new THREE.WebGLRenderer();
+		renderer.setSize (window.innerWidth, window.innerHeight );
+		document.body.appendChild( renderer.domElement );
+		
+		//Constructores
+		//////////////////////////R//////////////////////////
+function Pelota(posx,posy){
+// se plantean las geometrias
+
+        
+
+
+var esferaForma= new THREE.SphereGeometry(2.5,32,32,0,6.3,0,1.57);
+var cilinfroFormaCuerpo= new THREE.CylinderGeometry(2.5, 2.5, 4.5);
+//2, 2, 5, 64, 64, 0, 0, 6.3
+var cilinfroFormaAntena= new THREE.CylinderGeometry(0.1,0.1,0.7);
+var cilinfroFormaCuello= new THREE.CylinderGeometry(2.3,2.3,0.3,64,64,0,0,6.3);
+var cilinfroFormaPie= new THREE.CylinderGeometry(0.5,0.5,1.8);
+var cilinfroFormaBrazo= new THREE.CylinderGeometry(0.5,0.5,3.3);
+var cilinfroFormaBrazo1= new THREE.CylinderGeometry(0.33,0.33,0.4);
+
+// para generar una forma combinada se requiere de las mallas
+//para poder desplazar las formas en el espacio virtual
+
+var esfera1=new THREE.Mesh(esferaForma);
+var Cuerpo=new THREE.Mesh(cilinfroFormaCuerpo);
+var Antena1 = new THREE.Mesh(cilinfroFormaAntena);
+var Antena2 = new THREE.Mesh(cilinfroFormaAntena);
+var Cuello = new THREE.Mesh(cilinfroFormaCuello);
+var PieI = new THREE.Mesh(cilinfroFormaPie);
+var PieD = new THREE.Mesh(cilinfroFormaPie);
+var BrazoI = new THREE.Mesh(cilinfroFormaBrazo);
+var BrazoD = new THREE.Mesh(cilinfroFormaBrazo);
+var brazI = new THREE.Mesh(cilinfroFormaBrazo1);
+var brazD = new THREE.Mesh(cilinfroFormaBrazo1);
+
+// Se desplazan las mallas
+
+Cuello.position.y=2.4;
+esfera1.position.y=2.4;
+Antena1.position.x=-1;
+Antena1.position.y=4.75;
+Antena2.position.x=1;
+Antena2.position.y=4.75;
+
+PieI.position.x=-1;
+PieI.position.y=-2.5;
+PieD.position.x=1;
+PieD.position.y=-2.5;
+
+brazI.rotation.z=90*Math.PI/180;
+brazD.rotation.z=90*Math.PI/180;
+
+brazI.position.x=-2.7;
+brazI.position.y=1.8;
+brazD.position.x=2.7;
+brazD.position.y=1.8;
+
+BrazoI.position.x=-3.1;
+BrazoI.position.y=0.65;
+BrazoD.position.x=3.1;
+BrazoD.position.y=0.65;
+
+// se genera una forma geometrica abstracta
+
+var forma = new THREE.Geometry();
+
+// se utiliza el paquete GeometryUtils para conjuntar las formas 
+THREE.GeometryUtils.merge(forma,esfera1);
+THREE.GeometryUtils.merge(forma,Cuerpo);
+THREE.GeometryUtils.merge(forma,Antena1);
+THREE.GeometryUtils.merge(forma,Antena2);
+THREE.GeometryUtils.merge(forma,Cuello);
+THREE.GeometryUtils.merge(forma,PieI);
+THREE.GeometryUtils.merge(forma,PieD);
+THREE.GeometryUtils.merge(forma,BrazoI);
+THREE.GeometryUtils.merge(forma,BrazoD);
+THREE.GeometryUtils.merge(forma,brazI);
+THREE.GeometryUtils.merge(forma,brazD);
+
+// se genera la malla a partir de la forma
+THREE.ImageUtils.crossOrigin = '';
+ var textura = new THREE.TextureLoader().load('http://FrankIsmael.github.io/rv/lazules.jpg');
+var Material =new THREE.MeshPhongMaterial({map:textura});
+
+//new THREE.MeshPhongMaterial(#3fce21);-->
+ this.__proto__= new THREE.Mesh(forma, Material);
+this.__proto__.scale.set(.2,.2,.2);
+this.__proto__.rotation.x= 90*Math.PI/180;
+
+var _posx=posx;
+        var _posy=posy;
+        this.position.x=posx;
+        this.position.y=posy;
+
+this.setPosx=function(posx){
+          _posx=posx;
+        }
+        this.setPosy=function(posy){
+          _posy=posy;
+        }
+        this.getPosx=function(){
+          return _posx;
+        }
+        this.getPosy=function(){
+          return _posy;
+        }
+
+}
+
+
+      //////////////////////////////////////////////////////
+		
+      
+    var pelota = new Pelota(7,5);
+    var pelota2 = new Pelota(2,3); 
+    
+    pelota.position.x=7;
+    pelota.position.y=5;
+    pelota2.position.x=2;
+    pelota2.position.y=3;
+		
+		var parediz= new THREE.Mesh(new THREE.BoxGeometry(.5, 10, .5),new THREE.MeshLambertMaterial({color: 0x00ffff}));
+		var pareds= new THREE.Mesh(new THREE.BoxGeometry(10, .5, .5),new THREE.MeshLambertMaterial({color: 0x00ffff}));
+		var paredin= new THREE.Mesh(new THREE.BoxGeometry(10, .5, .5),new THREE.MeshLambertMaterial({color: 0x00ffff}));
+		var paredder= new THREE.Mesh(new THREE.BoxGeometry(.5, 10, .5),new THREE.MeshLambertMaterial({color: 0x00ffff}));
+				
+		//ILUMINCACION
+		var luzpuntual=new THREE.PointLight(0xffffff);
+		luzpuntual.position.x=5;
+		luzpuntual.position.y=5;
+		luzpuntual.position.z=10;
+		escena.add(luzpuntual);
+		
+		parediz.position.x=-.125; parediz.position.y=5;
+		pareds.position.x=5; pareds.position.y=9.75;
+		paredin.position.x=5; paredin.position.y=.25;
+		paredder.position.x=9.375; paredder.position.y=5;
+		
+		escena.add(pelota);
+		escena.add(pelota2);
+		escena.add(parediz);
+		escena.add(pareds);
+
+
+		escena.add(paredin);
+		escena.add(paredder);
+		escena.add(camara);
+		
+		//*Ray Casting* o trazado de rayo es una técnica que se utiliza para determinar la intersección
+		
+		var raycaster1=new THREE.Raycaster(pelota.position, new THREE.Vector3(-1,0,0)); //pared izquierda
+		var raycaster2=new THREE.Raycaster(pelota.position, new THREE.Vector3(0,1,0)); //pared superior
+		var raycaster3=new THREE.Raycaster(pelota.position, new THREE.Vector3(1,0,0)); //bloque movil
+		var raycaster4=new THREE.Raycaster(pelota.position, new THREE.Vector3(0,-1,0)); //pared inferior
+		
+	  var raycaster21=new THREE.Raycaster(pelota2.position, new THREE.Vector3(-1,0,0)); //pared izquierda
+		var raycaster22=new THREE.Raycaster(pelota2.position, new THREE.Vector3(0,1,0)); //pared superior
+		var raycaster23=new THREE.Raycaster(pelota2.position, new THREE.Vector3(1,0,0)); //bloque movil
+		var raycaster24=new THREE.Raycaster(pelota2.position, new THREE.Vector3(0,-1,0)); //pared inferior
+		
+		var stepx=-0.045;
+		var stepy=-0.055;
+		var stepx2=-0.045;
+		var stepy2=-0.065;
+		var flag=-1;
+		
+		//Control teclado para mover el bloque
+		//document.onkeydown=teclado;
+    //function teclado(evento){
+      //var paso=0.375;
+    	//if(evento.keyCode=='38'){  //flecha arriba   
+    		//
+    	//else if(evento.keyCode=='40'){  //flecha abajo
+    	//	paredder.position.y -= paso;
+    	//}
+    //}
+    
+		//Animación
+		function loop(){
+		  requestAnimationFrame( loop );
+		  //Determinar las interacciones entre los objetos de la escena por medio del rayo trazado
+		  var interseccion1=raycaster1.intersectObject(parediz);
+		  var interseccion2=raycaster2.intersectObject(pareds);
+		  var interseccion3=raycaster3.intersectObject(paredder);
+		  var interseccion4=raycaster4.intersectObject(paredin);
+		  var interseccion21=raycaster21.intersectObject(parediz);
+		  var interseccion22=raycaster22.intersectObject(pareds);
+		  var interseccion23=raycaster23.intersectObject(paredder);
+		  var interseccion24=raycaster24.intersectObject(paredin);
+		  
+		  if((interseccion1.length>0 && interseccion1[0].distance<=.25)||
+		    (interseccion3.length>0 && interseccion3[0].distance<=.25)){
+		  stepx=-stepx;
+		    if (stepx<0){
+		      stepx=stepx-.009; //aumentar la velocidad en cada golpe a la pelota
+		    }
+      }
+      
+      if((interseccion2.length>0 && interseccion2[0].distance<=.25)||
+		    (interseccion4.length>0 && interseccion4[0].distance<=.25)){
+		  stepy=-stepy;
+      }
+      
+      if((interseccion21.length>0 && interseccion21[0].distance<=.25)||
+		    (interseccion23.length>0 && interseccion23[0].distance<=.25)){
+		  stepx2=-stepx2;
+		    if (stepx2<0){
+		      stepx2=stepx2-.009; //aumentar la velocidad en cada golpe a la pelota
+		    }
+      }
+      
+      if((interseccion22.length>0 && interseccion22[0].distance<=.25)||
+		    (interseccion24.length>0 && interseccion24[0].distance<=.25)){
+		  stepy2=-stepy2;
+      }
+    
+     /*pelota.setPosx(pelota.getPosx+stepx); 
+     pelota.setPosy(pelota.getPosY+stepy);
+     pelota2.setPosx(pelota2.getPosx+stepx2);
+     pelota2.setPosy(pelota2.getPosy+stepy2);*/
+		 pelota.position.x += stepx;
+		 pelota2.position.x += stepx2;
+		 pelota.position.y += stepy;
+		 pelota2.position.y += stepy2;
+		 
+		 //Reiniciar Juego, posición pelota
+		 //cambia color cada que se pierde.
+	   // Se reinicia a nivel inicial, velocidad mas baja
+		 if(pelota.position.x>=14 && pelota2.position.x>=14){
+		    flag=-flag;
+        pelota.position.x=7;		pelota.position.y=5;
+        pelota2.position.x=2;		pelota2.position.y=3;
+        stepx=-0.045;
+		    stepy=-0.055;
+		    stepx2=-0.045;
+		    stepy2=-0.065;
+		    if (flag<0){
+		    pelota.material=new THREE.MeshLambertMaterial({color: 0xffff00});
+		    pelota2.material=new THREE.MeshLambertMaterial({color: 0xff0000});
+		    parediz.material=new THREE.MeshLambertMaterial({color: 0x00ffff});
+		    pareds.material=new THREE.MeshLambertMaterial({color: 0x00ffff});
+		    paredin.material=new THREE.MeshLambertMaterial({color: 0x00ffff});
+		    paredder.material=new THREE.MeshLambertMaterial({color: 0x00ffff});
+		    }
+		    if (flag>0){
+		    pelota.material=new THREE.MeshLambertMaterial({color: 0x0000ff});
+		    pelota2.material=new THREE.MeshLambertMaterial({color: 0x00ff00});
+		    parediz.material=new THREE.MeshLambertMaterial({color: 0xffff00});
+		    pareds.material=new THREE.MeshLambertMaterial({color: 0xffff00});
+		    paredin.material=new THREE.MeshLambertMaterial({color: 0xffff00});
+		    paredder.material=new THREE.MeshLambertMaterial({color: 0xffff00});
+		    }
+		 }
+
+		 raycaster1.set(pelota.position, new THREE.Vector3(-1,0,0)); //pared izquierda
+		 raycaster2.set(pelota.position, new THREE.Vector3(0,1,0)); //pared superior
+		 raycaster3.set(pelota.position, new THREE.Vector3(1,0,0)); //bloque movil
+		 raycaster4.set(pelota.position, new THREE.Vector3(0,-1,0)); //pared inferior
+		 raycaster21.set(pelota2.position, new THREE.Vector3(-1,0,0)); //pared izquierda
+		 raycaster22.set(pelota2.position, new THREE.Vector3(0,1,0)); //pared superior
+		 raycaster23.set(pelota2.position, new THREE.Vector3(1,0,0)); //bloque movil
+		 raycaster24.set(pelota2.position, new THREE.Vector3(0,-1,0)); //pared inferior
+		  
+		  renderer.render( escena, camara);
+		}
+		
+		loop();
+	  </script>
+	</body>
+</html>
