@@ -76,13 +76,13 @@ function RBA(x=0, y=0){
  THREE.ImageUtils.crossOrigin = '';
  
  this.ROBOT=new Robot();
- this.ROBOT.rotation.z=0.5; 
+ //this.ROBOT.rotation.z=0.5; 
  this.add(this.ROBOT);
  
  this.sensor=new Sensor();
  this.actuator=new Array();
  
- //this.ROBOT.rotation.x=Math.PI/2;
+ this.ROBOT.rotation.x=Math.PI/2;
  this.ROBOT.scale.set(1,1,1);
 }
 RBA.prototype=new Agent();
