@@ -83,7 +83,7 @@ function RBA(x=0, y=0){
  this.actuator=new Array();
  
  this.ROBOT.rotation.x=Math.PI/2;
- this.ROBOT.rotation.z=Math.PI/2;
+ this.ROBOT.rotation.y=Math.PI/2;
  this.ROBOT.scale.set(1,1,1);
 }
 RBA.prototype=new Agent();
