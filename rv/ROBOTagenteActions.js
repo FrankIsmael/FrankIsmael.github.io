@@ -75,14 +75,14 @@ function RBA(x=0, y=0){
  Agent.call(this,x,y);
  
  this.ROBOT=new Robot();
- this.ROBOT.rotation.z=-0; 
+ this.ROBOT.rotation.z=0; 
  this.add(this.ROBOT);
  
  this.sensor=new Sensor();
  this.actuator=new Array();
  
  this.ROBOT.rotation.x=Math.PI/2;
- this.ROBOT.scale.set(.2,.2,.2);
+ this.ROBOT.scale.set(.5,.5,.5);
 }
 RBA.prototype=new Agent();
 
