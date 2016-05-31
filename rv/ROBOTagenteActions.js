@@ -124,10 +124,10 @@ RBA.prototype.sense=function(environment){
 
 RBA.prototype.plan = function(environment){
  this.actuator.commands=[];
-  if(this.sensor.colision==false)
-   this.actuator.commands.push('Derecho');
-  else
-   this.actuator.commands.push('RotarIzquierda');
+ if(this.sensor.colision==false )
+  this.actuator.commands.push('Derecho');
+ else if(this.sensor.colision==true )
+   this.actuator.commands.push('RotarDerecha');
 }
 
 RBA.prototype.act=function(environment){
